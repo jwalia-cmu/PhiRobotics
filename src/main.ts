@@ -1,5 +1,5 @@
 import "./styles.css";
-import { DOMAINS, FOUNDERS, HERO, SITE, VIDEO } from "./config";
+import { DOMAINS, HERO, SITE, VIDEO } from "./config";
 import { startTypewriter } from "./typing";
 import { initVideoBackground } from "./video";
 
@@ -44,29 +44,6 @@ function setupBranding() {
   }
 }
 
-function setupFounders() {
-  const cards = Array.from(document.querySelectorAll<HTMLElement>(".people .person"));
-  if (cards.length === 0) return;
-
-  for (let i = 0; i < Math.min(cards.length, FOUNDERS.length); i++) {
-    const cfg = FOUNDERS[i]!;
-    const card = cards[i]!;
-    const img = card.querySelector("img") as HTMLImageElement | null;
-    const name = card.querySelector(".person__name");
-    const line = card.querySelector(".person__line");
-    const link = card.querySelector(".person__link") as HTMLAnchorElement | null;
-
-    if (img) {
-      const base = (import.meta as any).env?.BASE_URL ?? "/";
-      const p = cfg.photo;
-      img.src = /^https?:\/\//i.test(p) ? p : `${base}${p.replace(/^\//, "")}`;
-    }
-    setText(name, cfg.name);
-    setText(line, cfg.line);
-    if (link) link.href = cfg.linkedin;
-  }
-}
-
 function setupTypewriter() {
   const el = $("#typingTarget") as HTMLElement | null;
   if (!el) return;
@@ -103,7 +80,6 @@ async function setupVideo() {
 }
 
 setupBranding();
-setupFounders();
 setupTypewriter();
 setupVideo();
 
