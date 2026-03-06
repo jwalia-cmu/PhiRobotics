@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 32" fill="#000">
+  <!-- T -->
+  <path d="M0 2h20v5H13v23H7V7H0z"/>
+  <!-- U -->
+  <path d="M24 2h6v20c0 3.3 2 5.5 5 5.5s5-2.2 5-5.5V2h6v20c0 6.2-4.5 10.5-11 10.5S24 28.2 24 22z"/>
+  <!-- M -->
+  <path d="M52 2h8l7 18 7-18h8v28h-6V10l-7 17h-4L58 10v20h-6z"/>
+</svg>

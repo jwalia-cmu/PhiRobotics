@@ -13,34 +13,18 @@ function setText(el: Element | null, text: string) {
 }
 
 function setupBranding() {
-  const kicker = document.querySelector(".hero__kicker");
-  setText(kicker, SITE.brand);
+  const yearEl = $("#year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear().toString();
 
-  const footerBrand = document.querySelector(".footer__inner > div");
-  if (footerBrand) {
-    // footerBrand currently contains © YEAR BRAND. Keep structure but update brand.
-    const yearSpan = footerBrand.querySelector("#year") as HTMLSpanElement | null;
-    const year = new Date().getFullYear().toString();
-    if (yearSpan) yearSpan.textContent = year;
-    footerBrand.childNodes.forEach((n) => {
-      if (n.nodeType === Node.TEXT_NODE) {
-        // noop
-      }
-    });
-    // Replace brand text after year.
-    const textNodes = Array.from(footerBrand.childNodes).filter((n) => n.nodeType === Node.TEXT_NODE);
-    if (textNodes.length) {
-      textNodes[textNodes.length - 1]!.textContent = ` ${SITE.brand}`;
-    }
-  } else {
-    const yearEl = $("#year");
-    if (yearEl) yearEl.textContent = new Date().getFullYear().toString();
+  const contactCta = document.querySelector(".contact__cta") as HTMLAnchorElement | null;
+  if (contactCta) {
+    contactCta.href = `mailto:${SITE.email}`;
   }
 
-  const contactEmail = document.querySelector(".contact__email") as HTMLAnchorElement | null;
-  if (contactEmail) {
-    contactEmail.href = `mailto:${SITE.email}`;
-    contactEmail.textContent = SITE.email;
+  const footerEmail = document.querySelector(".footer__email") as HTMLAnchorElement | null;
+  if (footerEmail) {
+    footerEmail.href = `mailto:${SITE.email}`;
+    footerEmail.textContent = SITE.email;
   }
 }
 
