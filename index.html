@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Phi Robotics | Teleoperation Infrastructure</title>
-    <meta name="description" content="Teleoperation infrastructure for robotics teams. Any robot, any task, one platform." />
+    <title>Phi Robotics | Teleoperation OS</title>
+    <meta name="description" content="Teleoperation OS for robotics teams. Any robot, any task, one platform." />
     <link rel="icon" type="image/svg+xml" href="logo.svg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,6 +15,16 @@
   </head>
 
   <body>
+    <a class="skip-link" href="#platform">Skip to content</a>
+
+    <header class="header">
+      <a class="header__brand" href="#top" aria-label="Phi Robotics home">
+        <img class="header__logo" src="logo.svg" alt="" />
+        <span class="header__name">Phi Robotics</span>
+      </a>
+      <a class="btn btn--primary btn--sm" href="mailto:founder@phirobo.com">Book a Demo</a>
+    </header>
+
     <div class="bg" aria-hidden="true">
       <video id="videoA" class="bg__video is-active" muted playsinline autoplay loop preload="metadata"></video>
       <video id="videoB" class="bg__video" muted playsinline autoplay loop preload="metadata"></video>
@@ -23,73 +33,115 @@
     </div>
 
     <main>
-      <section class="hero">
+      <section class="hero" id="top">
         <div class="hero__inner">
-          <div class="brandbar" aria-label="Phi Robotics">
-            <img class="brandbar__logo" src="logo.svg" alt="" />
-            <div class="brandbar__name">Phi Robotics</div>
-          </div>
-          <h1 class="hero__title">Teleoperation Infra for</h1>
+          <a class="yc" href="https://www.ycombinator.com/" target="_blank" rel="noopener" aria-label="Backed by Y Combinator">
+            <svg class="yc__mark" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+              <rect width="256" height="256" fill="#FB651E" />
+              <path d="M71 70 128 143 185 70 M128 139 128 196" fill="none" stroke="#fff" stroke-width="23" stroke-linecap="butt" stroke-linejoin="round" />
+            </svg>
+            <span class="yc__text">Backed by <strong>Y&nbsp;Combinator</strong></span>
+          </a>
+
+          <h1 class="hero__title">Teleoperation OS for</h1>
           <div class="hero__typing" aria-label="Rotating domains">
             <span id="typingTarget"></span><span class="caret" aria-hidden="true"></span>
           </div>
-          <p class="hero__sub">End-to-end teleoperation as a service. Deploy your robots in days, not months.</p>
+          <div class="hero__flow">
+            <svg class="hero__connectors" viewBox="0 0 1080 160" preserveAspectRatio="none" fill="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="connGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#65E6FF" />
+                  <stop offset="1" stop-color="#BBA7FF" />
+                </linearGradient>
+                <marker id="connArrow" viewBox="0 0 12 12" refX="8.5" refY="6" markerWidth="9" markerHeight="9" orient="auto" markerUnits="userSpaceOnUse">
+                  <path d="M2 2 10 6 2 10" fill="none" stroke="#a9e3ff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                </marker>
+              </defs>
+
+              <path class="conn conn--base" d="M540 30 L540 64 C540 92 160 80 160 104" vector-effect="non-scaling-stroke" marker-end="url(#connArrow)" />
+              <path class="conn conn--base" d="M540 30 L540 64 C540 92 910 80 910 104" vector-effect="non-scaling-stroke" marker-end="url(#connArrow)" />
+
+              <path class="conn conn--pulse" d="M540 30 L540 64 C540 92 160 80 160 104" vector-effect="non-scaling-stroke" />
+              <path class="conn conn--pulse conn--pulse-2" d="M540 30 L540 64 C540 92 910 80 910 104" vector-effect="non-scaling-stroke" />
+
+              <circle class="conn-node" cx="540" cy="30" r="3.4" />
+            </svg>
+
+            <p class="hero__sub flow__source">End-to-end teleoperation as a service.</p>
+            <p class="hero__sub flow__target flow__target--left">Deploy your robots in days, not months.</p>
+            <p class="hero__sub flow__target flow__target--right">We don't sell data — we enable <strong>you</strong> to collect it.</p>
+          </div>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="mailto:founder@phirobo.com">Book a Demo</a>
+            <a class="btn btn--ghost" href="#platform">See the platform</a>
+          </div>
         </div>
       </section>
 
-      <section class="mid">
-        <div class="mid__hero">
-          <div class="mid__hero-stack">
-            <h2 class="mid__title">Any Robot, Any Task, One Platform.</h2>
-            <section class="advisor-strip" aria-label="Advisors and affiliations">
-              <p class="advisor-strip__text">Built by engineers and researchers from</p>
-              <div class="advisor-strip__logos">
-                <span class="advisor-strip__logo"><img src="/logos/advisors/microsoft.svg" alt="Microsoft" loading="lazy" /></span>
-                <span class="advisor-strip__logo"><img src="/logos/advisors/mit.svg" alt="MIT" loading="lazy" /></span>
-                <span class="advisor-strip__logo"><img src="/logos/advisors/cmu.svg" alt="Carnegie Mellon University" loading="lazy" /></span>
-                <span class="advisor-strip__logo"><img src="/logos/advisors/tum.svg" alt="Technical University of Munich" loading="lazy" /></span>
-                <span class="advisor-strip__logo"><img src="/logos/advisors/franka-robotics.svg" alt="Franka Robotics" loading="lazy" /></span>
-                <span class="advisor-strip__logo"><img src="/logos/advisors/cambridge.svg" alt="University of Cambridge" loading="lazy" /></span>
-                <span class="advisor-strip__logo"><img src="/logos/advisors/nus.svg" alt="National University of Singapore" loading="lazy" /></span>
-                <span class="advisor-strip__logo"><img src="/logos/advisors/zoox.png" alt="Zoox" loading="lazy" /></span>
-                <span class="advisor-strip__logo"><img src="/logos/advisors/mbzuai.png" alt="MBZUAI" loading="lazy" /></span>
-                <span class="advisor-strip__logo"><img src="/logos/advisors/hpe.svg" alt="Hewlett Packard Enterprise" loading="lazy" /></span>
-              </div>
-            </section>
-          </div>
-        </div>
+      <section class="mid" id="platform">
+        <div class="section">
+          <h2 class="mid__title">Any Robot, Any Task, One Platform.</h2>
 
-        <div class="mid__inner">
+          <div class="proof">
+            <p class="proof__label">Built by engineers and researchers from</p>
+            <div class="proof__logos">
+              <img src="/logos/advisors/microsoft.svg" alt="Microsoft" loading="lazy" />
+              <img src="/logos/advisors/mit.svg" alt="MIT" loading="lazy" />
+              <img src="/logos/advisors/cmu.svg" alt="Carnegie Mellon University" loading="lazy" />
+              <img src="/logos/advisors/tum.svg" alt="Technical University of Munich" loading="lazy" />
+              <img src="/logos/advisors/franka-robotics.svg" alt="Franka Robotics" loading="lazy" />
+              <img src="/logos/advisors/cambridge.svg" alt="University of Cambridge" loading="lazy" />
+              <img src="/logos/advisors/nus.svg" alt="National University of Singapore" loading="lazy" />
+              <img src="/logos/advisors/zoox.png" alt="Zoox" loading="lazy" />
+              <img src="/logos/advisors/mbzuai.png" alt="MBZUAI" loading="lazy" />
+              <img src="/logos/advisors/hpe.svg" alt="Hewlett Packard Enterprise" loading="lazy" />
+            </div>
+          </div>
+
+          <div class="proof proof--customers">
+            <p class="proof__label">Used by teams at</p>
+            <div class="proof__wordmarks">
+              <span class="wordmark wordmark--nvidia" aria-label="NVIDIA">NVIDIA</span>
+              <span class="wordmark" aria-label="Origin.tech">Origin<span class="wordmark__dim">.tech</span></span>
+              <span class="wordmark" aria-label="Field AI">Field<span class="wordmark__bold">AI</span></span>
+            </div>
+          </div>
 
           <div class="cards" role="list">
             <div class="card" role="listitem">
-              <svg class="card__icon" viewBox="0 0 64 64" fill="none"><rect x="29" y="5" width="6" height="54" rx="3" fill="rgba(255,255,255,0.85)"/><circle cx="32" cy="32" r="15" stroke="rgba(255,255,255,0.85)" stroke-width="5"/></svg>
-              <div class="card__title">Low Latency</div>
-              <div class="card__desc">Consistent quality under real-world networks, with operator-first UX.</div>
+              <span class="card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4.5 13.2c-.4.5 0 1.3.6 1.3H10l-1 7.2c-.1.7.8 1.1 1.2.5l8.3-11.3c.4-.5 0-1.3-.6-1.3H13l1-7.2c.1-.7-.8-1.1-1.2-.5Z" fill="currentColor"/></svg>
+              </span>
+              <h3 class="card__title">Low latency (&lt;150&nbsp;ms, IND&nbsp;↔&nbsp;USA)</h3>
             </div>
             <div class="card" role="listitem">
-              <svg class="card__icon" viewBox="0 0 64 64" fill="none"><rect x="29" y="5" width="6" height="54" rx="3" fill="rgba(255,255,255,0.85)"/><circle cx="32" cy="32" r="15" stroke="rgba(255,255,255,0.85)" stroke-width="5"/></svg>
-              <div class="card__title">High Precision</div>
-              <div class="card__desc">Sub-centimeter accuracy for delicate manipulation and navigation tasks.</div>
+              <span class="card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5.5c0 4.3-3 7.2-7 8.5-4-1.3-7-4.2-7-8.5V6l7-3Z"/><path d="m8.8 12 2.2 2.2L15.4 10"/></svg>
+              </span>
+              <h3 class="card__title">High reliability</h3>
             </div>
             <div class="card" role="listitem">
-              <svg class="card__icon" viewBox="0 0 64 64" fill="none"><rect x="29" y="5" width="6" height="54" rx="3" fill="rgba(255,255,255,0.85)"/><circle cx="32" cy="32" r="15" stroke="rgba(255,255,255,0.85)" stroke-width="5"/></svg>
-              <div class="card__title">24x7 Trained Operators</div>
-              <div class="card__desc">Outsourced, certified operators available around the clock so your robots never idle.</div>
+              <span class="card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><path d="M6 11a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h1v-6H6Z"/><path d="M18 11a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1v-6h1Z"/><path d="M18 17v.5a3 3 0 0 1-3 3h-3"/></svg>
+              </span>
+              <h3 class="card__title">Trained &amp; certified human operators, available 24×7</h3>
             </div>
             <div class="card" role="listitem">
-              <svg class="card__icon" viewBox="0 0 64 64" fill="none"><rect x="29" y="5" width="6" height="54" rx="3" fill="rgba(255,255,255,0.85)"/><circle cx="32" cy="32" r="15" stroke="rgba(255,255,255,0.85)" stroke-width="5"/></svg>
-              <div class="card__title">Vertically Integrated</div>
-              <div class="card__desc">Any hardware, any input device. One unified platform for sessions, access control, and telemetry.</div>
+              <span class="card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
+              </span>
+              <h3 class="card__title">Data collection on <strong>YOUR</strong> robots that <strong>YOU</strong> own</h3>
             </div>
           </div>
 
-          <div class="contact">
+          <div class="contact" id="contact">
             <div class="contact__inner">
               <div class="contact__text">Ready to deploy?</div>
               <p class="contact__sub">See how Phi Robotics can get your fleet operational in days.</p>
             </div>
-            <a class="contact__cta" href="mailto:founder@phirobo.com">Book a Demo</a>
+            <a class="btn btn--primary contact__cta" href="mailto:founder@phirobo.com">Book a Demo</a>
           </div>
         </div>
       </section>
@@ -98,9 +150,23 @@
         <div class="footer__inner">
           <div class="footer__brand">
             <img class="footer__logo" src="logo.svg" alt="" />
-            <span>© <span id="year"></span> Phi Robotics</span>
+            <div>
+              <div class="footer__name">Phi Robotics</div>
+              <div class="footer__muted">Teleoperation OS for any robot.</div>
+            </div>
           </div>
-          <div class="footer__muted">Teleoperation infrastructure</div>
+
+          <a class="yc yc--sm" href="https://www.ycombinator.com/" target="_blank" rel="noopener" aria-label="Backed by Y Combinator">
+            <svg class="yc__mark" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+              <rect width="256" height="256" fill="#FB651E" />
+              <path d="M71 70 128 143 185 70 M128 139 128 196" fill="none" stroke="#fff" stroke-width="23" stroke-linecap="butt" stroke-linejoin="round" />
+            </svg>
+            <span class="yc__text">Backed by <strong>Y&nbsp;Combinator</strong></span>
+          </a>
+        </div>
+
+        <div class="footer__bottom">
+          <span>© <span id="year"></span> Phi Robotics. All rights reserved.</span>
           <a class="footer__email" href="mailto:founder@phirobo.com">founder@phirobo.com</a>
         </div>
       </footer>
