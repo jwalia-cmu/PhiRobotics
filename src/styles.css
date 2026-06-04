@@ -365,15 +365,6 @@ a {
   -webkit-text-fill-color: transparent;
 }
 
-.hero__cta {
-  margin-top: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
 /* Mid section */
 .mid {
   position: relative;
@@ -678,10 +669,6 @@ a {
     justify-self: auto;
     max-width: 54ch;
     text-align: center;
-  }
-
-  .hero__cta .btn {
-    flex: 1 1 auto;
   }
 
   .contact {
